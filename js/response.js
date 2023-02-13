@@ -13,7 +13,7 @@ const response = () => {
         <p class="description">Lorem ipsum dolor</p>
     </li>
         `
-        pointsBlock.innerHTML += `<div class="point">1</div>`
+        pointsBlock.innerHTML += `<div class="point"></div>`
     }
 }
 

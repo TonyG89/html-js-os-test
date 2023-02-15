@@ -1,20 +1,24 @@
+import points from './points.js'
+import responseBlock from './responseBlock.js'
+
 const response = () => {
-    const cardBlock = document.querySelector("#response .cards")
+    points("#response", 4)
+    responseBlock()
 
-    const pointsBlock = document.querySelector("#response .points")
+    const pointBlock = document.querySelectorAll("#response .point")
 
-    for (let i = 1; i <= 4; i++) {
-        cardBlock.innerHTML += `
-        <li>
-        <img src="./img/response/avatar-${i}.png" alt="">
-        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-        <p>Lorem ipsum dolor sit amet consectetur. Tempus integer laoreet diam imperdiet volutpat. Mauris elit feugiat a libero vel. Duis hac odio pharetra sit egestas. </p>
-        <h4>More detailed</h4>
-        <p class="description">Lorem ipsum dolor</p>
-    </li>
-        `
-        pointsBlock.innerHTML += `<div class="point"></div>`
-    }
+    pointBlock.forEach(point => {
+        point.addEventListener("click", (e) => {
+            pointBlock.forEach((p,index) => {
+                p.classList.remove('active')
+                if (p === e.target){
+                    responseBlock(index)
+                }
+            })
+            e.target.classList.add("active")
+        })
+    })
+
 }
 
 export default response

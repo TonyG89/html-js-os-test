@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="uk">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +8,36 @@
     </head>
     <body>
         <header>
+            <nav>
             <div class="header-bottom">
                 <h1 class="logo">Лого</h1>
-                <nav class="menu"><a href="#about-us">Про нас</a>
-                    <a href="#service">Послуги</a>
-                    <a href="#works">Роботи</a>
-                    <a href="#response">Відгуки</a>
-                    <a href="#contacts">Контакти</a>
-                    <button class="menu-btn">Кнопка</button>
-                </nav>
-            </div>
+                    <ul class="menu">
+                        <li class="list-item">
+                            <a href="#about-us">Про нас</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#service">Послуги</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#works">Роботи</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#response">Відгуки</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#contacts">Контакти</a>
+                        </li>
+                        <li class="list-item">
+                            <button class="menu-btn">Кнопка</button>
+                        </li>
+                    </ul>
+                    <div class="burger none">
+                        <div class="point"></div>
+                        <div class="point"></div>
+                        <div class="point"></div>
+                    </div>
+                </div>
+            </nav>
             <div id="about-us">
                 <hgroup class="block-text">
                     <h2>Ми побудуємо твоє майбутнє</h2>
@@ -64,13 +84,13 @@
                     diam imperdiet volutpat. </p>
             </hgroup>
             <div class="album">
-                <div class="big-image"><img src="" alt=""></div>
+                <div class="big-image"><img src="./img/beautiful-living-room.jpg" alt="beautiful-living-room"></div>
                 <div class="small-images">
-                    <div class="sm-img"><img src="" alt=""></div>
-                    <div class="sm-img"><img src="" alt=""></div>
-                    <div class="sm-img"><img src="" alt=""></div>
-                    <div class="sm-img"><img src="" alt=""></div>
-                    <div class="sm-img"><img src="" alt=""></div>
+                    <div class="small-image"><img src="./img/beautiful-living-room.jpg" data-number="0" alt="beautiful-living-room"></div>
+                    <div class="small-image"><img src="./img/beautiful-living-room.jpg" data-number="1" alt="beautiful-living-room"></div>
+                    <div class="small-image"><img src="./img/beautiful-living-room.jpg" data-number="2" alt="beautiful-living-room"></div>
+                    <div class="small-image"><img src="./img/beautiful-living-room.jpg" data-number="3" alt="beautiful-living-room"></div>
+                    <div class="small-image"><img src="./img/beautiful-living-room.jpg" data-number="4" alt="beautiful-living-room"></div>
                 </div>
             </div>
             <div class="points">
@@ -94,7 +114,6 @@
             <h1>Відгуки</h1>
             <ul class="cards">
                 <!-- cards -->
-
             </ul>
             <div class="points">
                 <!-- points -->
@@ -111,17 +130,15 @@
             <form>
                 <input type="text" class="firstname" name="firstname"
                     placeholder="Ваше ім’я">
-                <input type="tel" class="lastname" name="lastname"
+                <input type="tel" class="tel" name="lastname"
                     placeholder="Ваш номер телефону">
-                <input type="email" class="email" name="email" placeholder="Ваша
-                    електронна адреса" value="mhmd.shrydh1996@gmail.com">
-                <textarea type="text" class="msg" name="msg" placeholder="Ваше
-                    повідомлення"></textarea>
-                <input type="submit" value="Кнопка">
+                <input type="email" class="email" name="email" placeholder="Ваша електронна адреса">
+                <textarea type="text" class="msg" name="msg" placeholder="Ваше повідомлення"></textarea>
+                <input class="btn-input" type="submit" value="Кнопка" onclick="alert('Дякую! Форма надіслана.')">
             </form>
         </section>
         <footer>
-            <div>
+            <div class="footer-columns">
                 <h1 class="logo">Лого</h1>
                 <p>Lorem ipsum dolor sit amet consectetur. Tempus integer
                     laoreet diam imperdiet volutpat. Mauris elit feugiat</p>
@@ -136,36 +153,29 @@
                             alt="whatsapp"></a>
                 </address>
             </div>
-            <div class="footer-columns">
-                <div><a href="#"><img src="./img/icons/tel.png"
-                            alt="tel.png"></a></div>
-                <div><a href="#"><img src="./img/icons/tel.png"
-                            alt="tel.png"></a></div>
-                <div><a href="#"><img src="./img/icons/tel.png"
-                            alt="tel.png"></a></div>
-                <div><a href="#"><img src="./img/icons/tel.png"
-                            alt="tel.png"></a></div>
-                <div><a href="#"><img src="./img/icons/tel.png"
-                            alt="tel.png"></a></div>
-                <div><a href="#"><img src="./img/icons/email.png"
-                            alt="email.png"></a></div>
-                <div><a href="#"><img src="./img/icons/tel.png"
-                            alt="tel.png"></a></div>
-                <div><a href="#"><img src="./img/icons/email.png"
-                            alt="email.png"></a></div>
-            </div>
+            <ul class="footer-columns">
+                <h2>Контакти</h2>
+                <div>
+                    <li>
+                        <a href="#"><img src="./img/icons/tel.png"
+                                alt="tel.png">Lorem ipsum dolor sit</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icons/tel.png"
+                                alt="tel.png">Lorem ipsum dolor sit</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icons/email.png"
+                                alt="email.png">Lorem ipsum dolor sit</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icons/email.png"
+                                alt="email.png">Lorem ipsum dolor sit</a>
+                    </li>
+                </div>
+            </ul>
+            <h6>Lorem ipsum dolor sit</h6>
         </footer>
-        <section class="loading-data">
-            <div class="loading-text">
-                <span class="char">L</span>
-                <span class="char">o</span>
-                <span class="char">a</span>
-                <span class="char">d</span>
-                <span class="char">i</span>
-                <span class="char">n</span>
-                <span class="char">g</span>
-            </div>
-        </section>
         <script type="module" src="app.js"></script>
     </body>
 </html>

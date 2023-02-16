@@ -66,6 +66,8 @@ header .header-bottom {
   height: 98px;
   margin: 0 -160px;
   padding: 0 160px;
+  z-index: 100;
+  top: 0;
 }
 header .header-bottom a {
   margin-right: 20px;
@@ -235,6 +237,7 @@ ul {
 }
 #service img {
   width: 265px;
+  z-index: -1;
 }
 
 #works {

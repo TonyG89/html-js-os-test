@@ -8,8 +8,8 @@ const burgerMenu = () => {
 
     const content = () => {
         if (pageYOffset > 97 ) {
-            console.log(innerWidth);
             nav.classList.add('menu-fixed')
+            nav.style.height="auto"
             about.style.height = '1026'
             text.style.marginTop = '98px'
             headerMenu.classList.add("fixed")
@@ -18,6 +18,7 @@ const burgerMenu = () => {
             burger.classList.remove("none")
         } else {
             nav.classList.remove('menu-fixed')
+            nav.style.height=""
             about.style.height = ''
             text.style.marginTop = ''
             headerMenu.classList.remove("fixed")
@@ -34,7 +35,6 @@ const burgerMenu = () => {
         document.querySelector(".menu").classList.toggle("appear")
         if (innerWidth < 769){
             headerMenu.classList.add("fixed")
-            console.log(innerWidth);
         }
     })
 

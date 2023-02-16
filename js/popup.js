@@ -11,7 +11,7 @@ const popup = () => {
         } else {
             const section = `
             <div class="overlay">
-            <div id="contacts">
+            <div class="contacts">
             <div class="close">x</div>
             <hgroup>
             <h1>Контактна форма</h1>

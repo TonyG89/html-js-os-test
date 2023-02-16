@@ -5,9 +5,10 @@ const burgerMenu = () => {
     const headerMenu = document.querySelector(".menu")
     const menuBtn = document.querySelector(".menu-btn").parentElement
     const burger = document.querySelector(".burger")
-    
-    window.addEventListener("scroll", () => {
-        if (pageYOffset > 97) {
+
+    const content = () => {
+        if (pageYOffset > 97 ) {
+            console.log(innerWidth);
             nav.classList.add('menu-fixed')
             about.style.height = '1026'
             text.style.marginTop = '98px'
@@ -24,10 +25,17 @@ const burgerMenu = () => {
             burger.classList.add("none")
             document.querySelector(".menu").classList.remove("appear")
         }
-    })
+    }
+
+
+    window.addEventListener("scroll", content)
 
     document.querySelector(".burger").addEventListener("click", () => {
         document.querySelector(".menu").classList.toggle("appear")
+        if (innerWidth < 769){
+            headerMenu.classList.add("fixed")
+            console.log(innerWidth);
+        }
     })
 
     document.querySelectorAll(".list-item").forEach(e => {
